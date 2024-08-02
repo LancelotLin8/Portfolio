@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Personal Portfolio </title>
+</head>
+
+<body>
+<nav>
+    <div class= "logo">  
+        <i class="fa-solid fa-user"></i>
+    </div>
+    <div class="links">
+        <a href="about.html" class = "active">About</a>
+        <a href="#">Portfolio</a>
+        <a href="https://www.linkedin.com/in/lancelot-lin-8b29ba26b/" target="_blank">Contact Me</a>
+    </div>
+</nav>
+<div class="about">
+    <div class="left">
+        <h3>Software Developer</h3>
+        <div class="info">
+            <h2>My name is Lancelot Lin</h2>
+            <p>Recent Graduate student with passion for software developing</p>
+            <div class="buttons">
+                <button class="hire" id="contactMeBtn"><i class="fas fa-envelope"></i> Contact Me</button>
+                <button class="email" id="copyEmailBtn" data-email="lancelotlin2000@gmail.com"><i class="fas fa-paper-plane"></i> Copy Email</button>
+            </div>
+        </div>
+    </div>
+            <div class="right">
+                <a href="#" class="online"><i class="fa-solid fa-circle"></i>Avalible For Job</a>
+                <div class="home-img">
+                    <img src="Image/Profile.png">
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('contactMeBtn').addEventListener('click', function () {
+            const email = 'lancelotlin2000@gmail.com'; 
+            const subject = 'Contact from Portfolio Website';
+            const body = 'Hello, I would like to get in touch with you regarding...';
+            window.location.href = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+        });
+    
+        document.getElementById('copyEmailBtn').addEventListener('click', function () {
+            const email = this.getAttribute('data-email');
+            navigator.clipboard.writeText(email).then(() => {
+                alert('Email address copied to clipboard!');
+            }).catch(err => {
+                console.error('Failed to copy text: ', err);
+            });
+        });
+    </script>
+
+
+<div class="works">
+    <div class="left">
+        <h3><i class="fa-solid fa-circle"></i>Recent Works</h3>
+        <div class="works-list">
+            <div class="item">
+                <div class="work-info">
+                    <h5><class="active">Current Project</h5>
+                    <p>2024 - Present</p>
+                </div>
+                <p>Personal Finance Tracker</p>
+            </div>
+            <div class="item">
+                <div class="work-info">
+                    <h5>Past Projects</h5>
+                  <p>2023</p>
+                  </div>
+                  <p>Personal Portfolio, </p>
+        </div>
+        <div class="item">
+            <div class="work-info">
+                <h5><class="active">School Project</h5>
+                <p>2022</p>
+            </div>
+            <p>Calculator App, Sorting algorithms </p>
+        </div>
+    </div>
+<div>
+
+    <div class="right">
+        <div class="item">
+            <a href="#">About My Work</a>
+            <p>
+                Recently graduated San Jose State University, looking for a breakthrough in the software engineer industy, with Skills in data analysis, statistical software, and effective communication. Ready to contribute analytical and problem-solving abilities to a dynamic team in an entry-level position, with a commitment to continuous learning.
+            </p>
+
+        </div>
+        <div class="item">
+            <a href="#">Data Analysis and Visualization</a>
+            <p>Analyzed economic datasets using Python/R and visualized trends with libraries like Pandas, Matplotlib, and Seaborn.</p>
+        </div>
+        <div class="item">
+            <a href="#">Machine Learning for Economic Modeling</a>
+            <p>Applied machine learning algorithms to build predictive models for economic forecasting and market behavior analysis</p>
+        </div>
+        <div class="item">
+            <a href="#">Economic Simulations and Game Theory</a>
+            <p>Modeled competitive markets and strategic interactions using computational simulations and game theory principles</p>
+        </div>
+        <div class="item">
+            <a href="#">Web Development for Economic Applications</a>
+            <p>Developed web applications using HTML, CSS, and JavaScript to present economic data interactively and accessibly</p>
+        </div>
+    </div>
+
+</div>
+
+<footer>
+    <a href="#">My Portfolio</a>
+    <div class="socials">
+        <a href="https://github.com/LancelotLin8" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/lancelot-lin-8b29ba26b/" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://www.instagram.com/lancel0t_lin/" target="_blank"><i class="fab fa-instagram"></i></a>
+    </div>
+        <a href="#" class="online"><i class="fa-solid fa-circle"></i>Avalible For Job</a>
+</footer>
+
+
+
+</body>
+
+</html>
